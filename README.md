@@ -2,8 +2,11 @@
 The objective of this problem is that given a set of TV channels as an input by the user, the algorithm will have to provide the user information regarding which are the DTH providers/operators that provide the selected channel pack. The user selects the required channels based on the channel ID.
 
 Sample Input/Output:
+-------------------------------------------------------------------------------------------------------------------------   
 Case 1: 
+-------------------------------------------------------------------------------------------------------------------------   
 Every selected channel has 1 or more DTH Operator providing all the channels
+-------------------------------------------------------------------------------------------------------------------------   
 
  0 : Sun Music                                                                                                                                  
  1 : Sun TV                                                                                                                                     
@@ -62,7 +65,9 @@ Thank you for choosing the channels
 -------------------------------------------------------------------------------------------------------------------------    
 
 Case 2:
+-------------------------------------------------------------------------------------------------------------------------   
 All the selected list of channels are not provided by a single DTH Operator
+-------------------------------------------------------------------------------------------------------------------------   
 
 0 : Sun Music 
 1 : Sun TV 
