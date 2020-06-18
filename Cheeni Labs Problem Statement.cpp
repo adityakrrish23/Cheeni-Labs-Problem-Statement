@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include<map>
 using namespace std;
@@ -134,52 +133,31 @@ int main()
         arr[j] = channel[j];
         store[0][j]=channel[j];
     }
-    int m=0,ins=0,r=0,county=0;
+    int ins=0,r=0,county=0;
 
-    /*
-    cout<<" \nthe value in store is: \n";
-    for(int u=0;u<i;u++){
-        cout<<" "<<store[0][u];
-    }
-    */
-    //Loop for DTH solution.
-    /* h= row of store
-       y= column f store
-       m= no of columns
-       l= no of rows
-       ins=channel index from store
-       e= index of dth[]
-       r= subset length*/
+
        r=i;
+       int h=0;
 
-        int h=0;
         while(1){
-        m=r;
-        //if(flag >= 1){l=l-1;}
-        //combinations of store
-        for(h=0;h<l+1;h++){
+        for(h=0;h<=l;h++){
                 for(int dth_var=0; dth_var<5; dth_var++){
                     dth[dth_var]=0;}
                 county=0;
-        for (int y=0;y<m;y++){
+
+        for (int y=0;y<r;y++){
             ins=store[h][y];
             for(int e=0;e<5;e++){
                 if(solution[ins][e]== 1){
                     dth[e]=dth[e]+1;
                 }
             }
-            //goes to next channel
-        }
-        /*
-        cout<<"\n dth values";
-        for(int w=0;w<r;w++){
-            cout<<" "<<dth[w];
-        }
-        cout<<"\n";*/
 
-        //if all selected channel got common dth then we print them
+        }
+
         cout<<"\n";
         for(int common=0;common<5;common++){
+
             if(dth[common]==r){
                     if(common ==0){
                 cout<<"(.)Airtel ";
@@ -202,36 +180,35 @@ int main()
 
         if(county >=1){
             cout<<"Is/Are the DTH available with the selected channel(s) like :-";
-            for(int store_y=0; store_y<m;store_y++){
+            for(int store_y=0; store_y<r;store_y++){
                 int appy=store[h][store_y];
+                if(h !=l){
                 cout<<"\n* "<<mymap[appy];
+                }
             }
             cout<<"\n-------------------------------------------------------------------------------------------------------------------------\n";
         }
         }
 
         if(county==0){
+
                 flag++;
             r = r-1;
-            int n = i; //i;
+            int n = i;
             printCombination(arr, n, r);
             cout<<"\n";
             //printing the combinations
-            //int z=0,q=0; //i-k;
-            /*for(z=0;z<l;z++){
-                    for(q=0;q<r;q++){
-                        cout<<store[z][q]<<" ";
-                    }
-                    cout<<"\n";
-                }*/
               if(r<2){
                     cout<<"No two channels in the given mix is provided by a single DTH\n";
-                    break;}
+                    break;
+                    }
             }
             else{
                    if (flag>0){ cout<<"\nSome channels are missing due to their availability in DTH, no single DTH can provide all the selected channel\n\nThe best possible combination is provided as above by some DTH";}
                     break;}
         }
 
+
 	return 0;
 }
+
