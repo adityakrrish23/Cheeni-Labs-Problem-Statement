@@ -42,14 +42,7 @@ Every selected channel has 1 or more DTH Operator providing all the channels
  Example press type 0 if you want Sun Music                                                                                                     
  (Press 31 to stop)         
  
- 8                                                                                                                                               
-0                                                                                                                                               
-3                                                                                                                                               
-15                                                                                                                                              
-16                                                                                                                                              
-21                                                                                                                                              
-2                                                                                                                                               
-28                                                                                                                                              
+8 0 3 15 16 21 2 28                                                                                                                                              
 31                                                                                                                                              
 Thank you for choosing the channels                                                                                                             
 8 0 3 15 16 21 2 28                                                                                                                             
